@@ -1,0 +1,26 @@
+[
+  {
+    "agent": "Log Analyst (DuckDB)",
+    "action": "Querying operational metrics for 500-level errors..."
+  },
+  {
+    "agent": "Log Analyst (DuckDB)",
+    "action": "Identified anomalies:\n        service  status_code  avg_latency\n0  streaming-svc          500       1250.0\n1  streaming-svc          503       1400.0"
+  },
+  {
+    "agent": "Context Agent (RAG)",
+    "action": "Searching vector store for corresponding runbooks..."
+  },
+  {
+    "agent": "Context Agent (RAG)",
+    "action": "Retrieved procedural context:\nIf streaming-svc returns 500s on /video/manifest, check the regional CDN cache layer. Latency over 1000ms indicates a cache miss storm."
+  },
+  {
+    "agent": "Orchestrator",
+    "action": "Synthesizing root cause analysis..."
+  },
+  {
+    "agent": "Orchestrator",
+    "action": "RCA Generated:\n🚨 INCIDENT RCA - STREAMING SERVICE 🚨\n\nSummary: streaming-svc is experiencing high latency (avg 1325ms) and 500/503 errors on /video/manifest.\nRoot Cause: CDN cache miss storm leading to origin server overload.\nAction Item: Check regional CDN cache layer and purge stale manifests."
+  }
+]
