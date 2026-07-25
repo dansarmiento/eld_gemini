@@ -1,0 +1,9 @@
+# config/pipeline.yaml
+llm:
+  provider: "ollama"
+  model: "jet-nemotron"
+  timeout: 120.0
+database:
+  engine: "duckdb"
+  path: "/data/local_analytics.duckdb"
+  schema_reference: "main"

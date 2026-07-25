@@ -1,0 +1,4 @@
+llama-agents
+llama-index-llms-ollama
+duckdb
+pandas

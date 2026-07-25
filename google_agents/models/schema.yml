@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fact_ad_telemetry
+    description: "Fact table capturing raw streaming advertisement event metrics."
+    columns:
+      - name: event_id
+        description: "Primary key for the telemetry event."
+        tests:
+          - unique
+          - not_null
+      - name: session_id
+        description: "Associated user streaming session."
+      - name: playback_duration_seconds
+        description: "Length of time the ad was actively played."
+
+  - name: fact_subscriber_lifecycle
+    description: "Fact table orchestrating subscription state changes and lifecycle events."
+    columns:
+      - name: subscriber_id
+        description: "Primary key identifying the subscriber."
+        tests:
+          - unique
+          - not_null
+      - name: subscription_tier
+        description: "Current tier of the subscriber (e.g., Basic, Premium)."
+      - name: lifecycle_status
+        description: "Active, churned, or paused."

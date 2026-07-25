@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "multi-agent-analytics-orchestrator"
+version = "0.1.0"
+description = "Multi-agent ADK system for dbt and DuckDB orchestration"
+authors = ["Daniel Sarmiento"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+google-adk = "^2.0.0"
+dbt-duckdb = "^1.8.0"
+litellm = "^1.40.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

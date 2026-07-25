@@ -1,0 +1,23 @@
+{
+    "name": "Sentinel IDP",
+    "short_name": "Sentinel",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#141414",
+    "theme_color": "#E50914",
+    "description": "Interactive Multi-Agent Ops Orchestrator",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

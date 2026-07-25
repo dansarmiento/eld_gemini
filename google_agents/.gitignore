@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# dbt & DuckDB
+target/
+dbt_packages/
+logs/
+*.duckdb
+*.duckdb.wal
+
+# Environment variables
+.env
